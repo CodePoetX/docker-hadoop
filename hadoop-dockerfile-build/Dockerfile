@@ -17,7 +17,7 @@ RUN yum install -y openssh openssh-server openssh-clients openssl openssl-devel 
     ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
     
-ADD config/other/ssh_config /root/.ssh/config
+ADD /ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config && \
     chown root:root /root/.ssh/config
 
