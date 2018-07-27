@@ -28,7 +28,7 @@ RUN wget http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-3.0.3/hadoop-3.0
 RUN mv /root/hadoop-3.0.3 $HADOOP_HOME
 
 #拷贝环境变量配置文件
-ADD config/other/bashrc /root/.bashrc
+ADD /bashrc /root/.bashrc
 
 #拷贝Hadoop配置文件
 ADD hadoop/* $HADOOP_HOME/etc/hadoop/
